@@ -1,0 +1,94 @@
+<html>
+    <head >
+        <style > 
+
+        
+            table { 
+                border: 1px solid black; 
+                margin-left: auto; 
+                margin-right: auto; 
+                background-color:rgb(112, 184, 36); 
+                color: rgb(210, 89, 28); 
+                  margin-top: 10%;
+             } 
+      
+            input[type="button"] { 
+                width: 100%; 
+                padding: 20px 40px; 
+                background-color:rgb(182, 65, 159); 
+                color: rgb(167, 224, 232); 
+                font-size: 24px; 
+                font-weight: bold; 
+                border: none; 
+                border-radius: 10px;
+
+            } 
+      
+            input[type="text"] { 
+                padding: 20px 30px; 
+                font-size: 24px; 
+                font-weight: bold; 
+                border: none; 
+                border-radius: 5px; 
+                border: 2px solid rgb(207, 105, 11); 
+
+            } 
+        </style> 
+    </head>
+    <body bgcolor="green"> 
+
+        <!-- Create table -->
+        <table id="calcu">
+            <tr> 
+                <td colspan="5"> 
+                    <input type="text" id="result"> 
+                </td> 
+            
+            </tr> 
+      
+            <tr> 
+                <td><input type="button" value="1" onclick="addToInput('1')"></td> 
+                <td><input type="button" value="2" onclick="addToInput('2')"></td> 
+                <td><input type="button" value="3" onclick="addToInput('3')"></td> 
+                <td><input type="button" value="+" onclick="addToInput('+')"></td> 
+            </tr> 
+            <tr> 
+                <td><input type="button" value="4"  onclick="addToInput('4')"></td> 
+                <td><input type="button" value="5"  onclick="addToInput('5')"></td> 
+                <td><input type="button" value="6"  onclick="addToInput('6')"></td> 
+                <td><input type="button" value="-" onclick="addToInput('-')"></td> 
+            </tr> 
+            <tr> 
+                <td><input type="button" value="7"  onclick="addToInput('7')"></td> 
+                <td><input type="button" value="8"  onclick="addToInput('8')"></td> 
+                <td><input type="button" value="9"  onclick="addToInput('9')"></td> 
+                <td><input type="button" value="*" onclick="addToInput('*')" ></td> 
+            </tr> 
+            <tr> 
+                <td><input type="button" value="0"  onclick="addToInput('0')"></td>
+                <td><input type="button" value="c"  onclick="clearInput()"></td>
+                <td><input type="button" value="="  onclick="calculate()"></td> 
+                <td><input type="button" value="/"  onclick="addToInput('/')"></td>
+                
+            </tr> 
+        </table>
+        <script language="javascript">
+        
+            function calculate() {
+                var result = document.getElementById("result");
+                result.value = eval(result.value);
+            }
+        
+            function clearInput() {
+                document.getElementById("result").value = "";
+            }
+        
+            function addToInput(value) {
+                document.getElementById("result").value  += value;
+        }
+        
+                </script>
+          
+    </body> 
+      
+    </html>   
